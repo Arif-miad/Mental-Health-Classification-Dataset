@@ -124,6 +124,7 @@ df = df.drop(columns=['Unnamed: 0'], axis=1)
 
 ### **Exploratory data analysis**:
 ```pthon
+
 plt.figure(figsize=(8, 5))
 sns.countplot(data=df, x='status', palette='viridis')
 plt.title('Count of Mental Health Statuses', fontsize=14)
@@ -133,6 +134,7 @@ plt.xticks(rotation=45)
 plt.show()
 
 ```
+![Alt text](https://github.com/Arif-miad/Mental-Health-Classification-Dataset/blob/main/resulit/Arif3.PNG)
 
 ```python
 from wordcloud import WordCloud
@@ -145,13 +147,15 @@ plt.axis('off')
 plt.title('Word Cloud of Statements', fontsize=16)
 plt.show()
 ```
-
+![Alt text](https://github.com/Arif-miad/Mental-Health-Classification-Dataset/blob/main/resulit/arif2.PNG)
 ```python
 import plotly.express as px
 fig = px.sunburst(df, path=['status'], values='statement_length',
                   title='Sunburst Chart of Mental Health Status Distribution')
 fig.show()
 ```
+![Alt text](https://github.com/Arif-miad/Mental-Health-Classification-Dataset/blob/main/resulit/arif1.PNG)
+
 ### **Data Preprocessing**:
 ```python
 most_frequent_statement = df['statement'].mode()[0]
@@ -202,6 +206,7 @@ for name, model in models.items():
 
 
 ```
+![Alt text](https://github.com/Arif-miad/Mental-Health-Classification-Dataset/blob/main/resulit/arif.PNG)
 
 ## Acknowledgments
 
